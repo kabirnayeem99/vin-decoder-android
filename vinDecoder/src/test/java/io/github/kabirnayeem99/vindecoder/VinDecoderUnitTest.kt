@@ -1,5 +1,6 @@
 package io.github.kabirnayeem99.vindecoder
 
+import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -30,5 +31,28 @@ class VinDecoderUnitTest {
         assertTrue(vin.valid())
         assertEquals("NA", vin.region)
         assertEquals("Toyota - trucks", vin.manufacturer)
+    }
+
+
+    @Test
+    fun testCountry() {
+        runBlocking {
+            val vin = VIN(number = "NMC111LKPRD100007")
+
+            assertTrue(vin.valid())
+            assertEquals("AS", vin.region)
+            assertEquals("Turkey", vin.getCountry())
+        }
+    }
+
+    @Test
+    fun testCountryWithEscapeCharactersInRegex() {
+        runBlocking {
+            val vin = VIN(number = "PFYBAAP12U1234567")
+
+            assertTrue(vin.valid())
+            assertEquals("AS", vin.region)
+            assertEquals("Singapore", vin.getCountry())
+        }
     }
 }
