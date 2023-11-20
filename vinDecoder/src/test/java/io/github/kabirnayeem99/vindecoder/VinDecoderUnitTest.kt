@@ -1,5 +1,6 @@
 package io.github.kabirnayeem99.vindecoder
 
+import io.github.kabirnayeem99.vindecoder.src.StillInAlpha
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -34,6 +35,7 @@ class VinDecoderUnitTest {
     }
 
 
+    @OptIn(StillInAlpha::class)
     @Test
     fun testCountry() {
         runBlocking {
@@ -45,6 +47,7 @@ class VinDecoderUnitTest {
         }
     }
 
+    @OptIn(StillInAlpha::class)
     @Test
     fun testCountryWithEscapeCharactersInRegex() {
         runBlocking {
