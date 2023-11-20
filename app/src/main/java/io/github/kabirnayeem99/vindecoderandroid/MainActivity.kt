@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun VINText() {
-    val randomVin = remember { VIN(number = "NMC111LKPRD100005") }
+    val randomVin = remember { VIN(number = "WP0ZZZ99ZTS392124") }
 
     LazyColumn(
         modifier = Modifier.padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally
