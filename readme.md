@@ -52,7 +52,7 @@ println("Model is $model")
 val type = vin.getVehicleTypeAsync()
 println("Type is $type")
 
-var generated = VINGenerator().generate()
+val generated = VIN.generate()
 println('Randomly Generated VIN is ${generated}')
 ```
 
@@ -72,7 +72,7 @@ VIN string is WP0ZZZ99ZTS392124
 Make is Porsche
 Model is 911
 Type is Passenger Car
-Randomly Generated VIN is NM4BW3NK0WA418856
+Randomly Generated VIN is NMC111LKPRD100007
 ```
 
 ## Features and bugs
