@@ -1,6 +1,8 @@
 VIN Decoder Android
 ================
 
+[![](https://jitpack.io/v/kabirnayeem99/vin-decoder-android.svg)](https://jitpack.io/#kabirnayeem99/vin-decoder-android)
+
 A VIN decoding, validation, and generation library for Android, written in Kotlin.
 
 **VIN Decoder Android** provides a simple decoding and validation library for Vehicle Identification
